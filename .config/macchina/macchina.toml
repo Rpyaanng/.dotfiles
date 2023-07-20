@@ -1,0 +1,3 @@
+theme = "Start"
+current_shell = true
+show = ["Distribution", "Terminal", "Shell", "Uptime", "Memory"]

@@ -17,14 +17,12 @@ sudo apt-get install build-essential
 brew install neovim
 
 # install my .files
-cd ~
-git clone https://github.com/rpyaanng/.files
-cd .files
 cp -r bin .tmux.conf .zshrc ~/
 
 # get my neovim config
 mkdir ~/.config
 cp -r nvim ~/.config
+
 # install powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 cd ~
@@ -33,14 +31,8 @@ cd ~
 sudo apt install fd-find
 brew install fzf
 brew install ripgrep
-
-read -p "Do you want to proceed? (yes/no) " yn
-
-case $yn in 
-	yes ) sudo apt install wslu;;
-	no ) echo exiting...;
-	* ) echo invalid response;
-		exit 1;;
-esac
+brew install fastfetch
+brew install node
+brew install luarocks
 
 echo Finished. Restart terminal to see zsh changes.

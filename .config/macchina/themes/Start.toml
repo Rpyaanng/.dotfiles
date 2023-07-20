@@ -1,0 +1,41 @@
+prefer_small_ascii = true
+
+spacing         = 2
+padding         = 1
+hide_ascii      = false
+separator       = "  > "
+key_color       = "#787916"
+separator_color = "#a21218"
+
+[palette]
+type            = "Light"
+visible         = true
+
+[bar]
+glyph           = "○"
+symbol_open     = '('
+symbol_close    = ')'
+visible         = true
+hide_delimiters = true
+
+[box]
+title           = " Terminal 🤖 "
+border          = "Rounded"
+visible         = true
+
+[box.inner_margin]
+x               = 1
+y               = 0
+
+[custom_ascii]
+path = "~/.files/ascii/cute"
+
+[randomize]
+key_color       = false
+pool            = "base"
+
+distro          = "Distro"
+terminal        = "Terminal"
+shell           = "Shell"
+resolution      = "Resolution"
+backlight       = "Brightness"
