@@ -35,8 +35,27 @@ sudo apt install fd-find
 brew install fzf ripgrep node luarocks macchina
 ```
 
+# Install a nerdfont that looks cool
+[Find it here](https://github.com/ryanoasis/nerd-fonts/tree/master)
+
+
 ### Copy the rest of my files
 ```
 cp -r .config ~/
 cp -r bin .tmux.conf .zshrc ~/
 ```
+
+# Intro to Tmux.
+
+| Map | Description |
+| :---- | :---- |
+| ` <C-a> ` | Every tmux operations starts with PREFIX. this with be denoted with <P>. |
+| ` <P>c` | Create a new tmux session. |
+| ` <P>n ` | Cycle between sessions. |
+| ` <P>[h] ` | Resize pane right. |
+| ` <P>[j] ` | Resize pane downwards. |
+| ` <P>[k] ` | Resize pane upwards. |
+| ` <P>[l] ` | Resize pane left. |
+| ` <P>w ` | List all sessions. |
+| ` <P>- ` | Split pane horizontally. |
+| ` <P>| ` | Split pane vertically. |
