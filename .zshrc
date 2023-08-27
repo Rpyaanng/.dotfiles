@@ -1,5 +1,3 @@
-alias vim="nvim"
-
 # disables prompt for fastfetch
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 

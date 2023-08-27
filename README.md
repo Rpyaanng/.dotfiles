@@ -1,22 +1,30 @@
 # .files
 This is my personal Ubuntu config feel free to use it and configure it.
 
-### Install Homebrew
+### Update Packages
 ```
 sudo apt update
-sudo apt install zsh curl wget git
+sudo apt install curl wget git
 sudo apt-get install build-essential
- /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-(echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> $HOME/.zprofile
 ```
-
-### Install zsh and oh-my-zsh with plugins
+### Install zsh shell 
 ```
 sudo apt install zsh
+```
+### Install Oh-My-Zsh
+```
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+```
+### install homebrew
+```
+/bin/bash -c "$(curl -fssl https://raw.githubusercontent.com/homebrew/install/master/install.sh)"
+```
+### add homebrew to .zprofile
+```
+(echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> $home/.zprofile
 ```
 ### Install Neovim
 ```
@@ -26,7 +34,7 @@ brew install neovim
 ### Install my Neovim files
 ```
 mkdir ~/.config
-git install https://github.com/rpyaanng/nvim ~/.config 
+git clone https://github.com/rpyaanng/nvim ~/.config 
 ```
 
 ### Install the rest
@@ -44,6 +52,8 @@ brew install fzf ripgrep node luarocks macchina
 cp -r .config ~/
 cp -r bin .tmux.conf .zshrc ~/
 ```
+
+And then restart the terminal. (Ctrl+d works here.)
 
 # Intro to Tmux.
 
