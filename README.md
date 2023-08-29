@@ -4,7 +4,7 @@ This is my personal Ubuntu config feel free to use it and configure it.
 ### Update Packages
 ```
 sudo apt update
-sudo apt install curl wget git
+sudo apt install curl wget git wslu
 sudo apt-get install build-essential
 ```
 ### Install zsh shell 
@@ -24,7 +24,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 ```
 ### add homebrew to .zprofile
 ```
-(echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> $home/.zprofile
+(echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> $HOME/.zprofile
 ```
 ### Install Neovim
 ```
@@ -34,7 +34,7 @@ brew install neovim
 ### Install my Neovim files
 ```
 mkdir ~/.config
-git clone https://github.com/rpyaanng/nvim ~/.config 
+git clone https://github.com/rpyaanng/nvim ~/.config/nvim
 ```
 
 ### Install the rest
@@ -43,14 +43,21 @@ sudo apt install fd-find
 brew install fzf ripgrep node luarocks macchina
 ```
 
-# Install a nerdfont that looks cool
-[Find it here](https://github.com/ryanoasis/nerd-fonts/tree/master)
+### Install a nerdfont that looks cool
+[Find some here](https://github.com/ryanoasis/nerd-fonts/tree/master)
 
 
 ### Copy the rest of my files
 ```
+git clone https://github.com/Rpyaanng/.files/
 cp -r .config ~/
 cp -r bin .tmux.conf .zshrc ~/
+```
+
+### Authenicate your github stuff.
+```
+brew install gh
+gh auth login
 ```
 
 And then restart the terminal. (Ctrl+d works here.)
