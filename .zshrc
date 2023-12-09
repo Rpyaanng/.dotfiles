@@ -14,6 +14,9 @@ fi
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+# Prevents curl from erroring that it cannot write the application to disk
+env | grep XDG~
+export XDG_RUNTIME_DIR="/tmp/${UID}-runtime-dir"
 
 export PATH=$PATH:~/bin
 export BREW_HOME="/home/linuxbrew/.linuxbrew/bin"
@@ -109,7 +112,7 @@ source $ZSH/oh-my-zsh.sh
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
-#   export EDITOR='mvim'
+#   export EDITOR='nvim'
 # fi
 
 # Compilation flags
