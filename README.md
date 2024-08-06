@@ -14,18 +14,27 @@ sudo apt install zsh
 ### Install Oh-My-Zsh
 ```
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+### Change your shell to Zsh
+```
+chsh -s $(which zsh)
+```
+
+### Install Oh-My-Zsh plugins
+```
 git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 ```
+
 ### install homebrew
 ```
 /bin/bash -c "$(curl -fssl https://raw.githubusercontent.com/homebrew/install/master/install.sh)"
 ```
-### add homebrew to .zprofile
-```
-(echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> $HOME/.zprofile
-```
+
+make sure to run the "Next steps to do:" section afterwards
+
 ### Install Neovim
 ```
 brew install neovim
@@ -40,7 +49,7 @@ git clone https://github.com/rpyaanng/nvim ~/.config/nvim
 ### Install the rest
 ```
 sudo apt install fd-find
-brew install fzf ripgrep node luarocks macchina
+brew install fzf ripgrep node luarocks
 ```
 
 ### Install a nerdfont that looks cool
@@ -50,6 +59,7 @@ brew install fzf ripgrep node luarocks macchina
 ### Copy the rest of my files
 ```
 git clone https://github.com/Rpyaanng/.files/
+cd .files
 cp -r .config ~/
 cp -r bin .tmux.conf .zshrc ~/
 ```
