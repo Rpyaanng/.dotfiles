@@ -12,16 +12,29 @@ sudo apt-get install build-essential
 sudo apt install zsh
 ```
 
+### Install Oh-My-Zsh
+```
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+### Install Oh-My-Zsh plugins
+```
+git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+```
+
 ### Change your shell to Zsh
 ```
 chsh -s $(which zsh)
 ```
+
 ### install homebrew
 ```
 /bin/bash -c "$(curl -fssl https://raw.githubusercontent.com/homebrew/install/master/install.sh)"
 ```
 
-make sure to run the "Next steps to do:" section afterwards
+Make sure to follow the "Next steps:"
 
 ### install oh-my-posh
 ```
