@@ -1,6 +1,6 @@
-[submodule "nvim"]
-	path = nvim
-	url = https://github.com/Rpyaanng/nvim
-[submodule "wezterm"]
-	path = wezterm
+[submodule ".config/wezterm"]
+	path = .config/wezterm
 	url = https://github.com/Rpyaanng/wezterm
+[submodule ".config/nvim"]
+	path = .config/nvim
+	url = https://github.com/Rpyaanng/nvim
